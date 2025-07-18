@@ -1,10 +1,10 @@
 body {
 	margin: 0;
 	padding: 0;
+	min-height: 100vh;
 	background-color: hsl(0, 0%, 100%);
 	font-family: 'Helvetica', sans-serif;
 	font-size: 18px;
-	color: #5B5B5B;
 }
 
 /* FONTS */
@@ -22,11 +22,11 @@ body {
 	--linkhovercolor: #000000;
 	--headercolor: #000000;
 	--featuredcontentcolor: #000000;
-	--highlightcolor: hsl(60, 100%, 50%);
+	--highlightcolor: hsl(50, 100%, 50%);
 	--menutextcolor: #585858;
 	--menuhovercolor: #000000;
 	--sidebarcolor: #F0F0F0;
-	--postcolor: #FFFFFF;
+	--postcolor: #dddddd;
 	--morecolor: #B9B9B9;
 	--moretextcolor: #000000;
 	--commentstextcolor: #000000;
@@ -92,7 +92,7 @@ a:hover {}
 	height: 600px;
 }
 
-#header {
+header {
 	overflow: hidden;
 	width: 1000px;
 	height: 150px;
@@ -147,7 +147,7 @@ a:hover {}
 
 #logo #logoicon {
 	height: 1em;
-	filter: brightness(0) saturate(100%) invert(90%) sepia(96%) saturate(7380%) hue-rotate(357deg) brightness(106%) contrast(113%);
+	filter: brightness(0) saturate(100%) invert(80%) sepia(10%) saturate(6000%) hue-rotate(357deg) brightness(106%) contrast(113%);
 	padding-right: 10px;
 }
 
@@ -245,7 +245,7 @@ a:hover {}
 	border-radius: 5px;
 }
 
-	/* LOGIN BUTTON */
+/* LOGIN BUTTON */
 
 #menu li.loginbutton {
 	margin-left: 30px;
@@ -300,12 +300,6 @@ a:hover {}
 .post .title {
 	padding: 7px 0px 0px 0px;
 	letter-spacing: -1px;
-}
-
-.post .title a {
-	border: none;
-	text-decoration: none;
-	color: #CFCFCF;
 }
 
 .post .meta {
@@ -623,44 +617,112 @@ ul.style1 .first {
 	border-radius: 15px;
 }
 
-
-.button a {
-	display: block;
-	float: left;
-	width: auto;
-	padding: 5px 5px;
-	margin-right: 10px;
-	background: var(--buttoncolor);
-	border-radius: 5px;
-	color: var(--buttontextcolor);
-	text-align: center;
-	text-decoration: none;
-}
-
 button {
-
-	display: inline-block;
-	outline: none;
-	cursor: pointer;
-	font-size: 14px;
-	line-height: 1;
-	border-radius: 500px;
-	transition-property: background-color, border-color, color, box-shadow, filter;
-	transition-duration: .3s;
-	border: 1px solid transparent;
-	letter-spacing: 2px;
-	min-width: 160px;
+	background-color: var(--highlightcolor);
+	color: var(--menuhovercolor);
+	border-radius: 999px;
+	/* fully rounded pill shape */
+	font-weight: 500;
+	padding: 10px 32px;
+	/* wider */
 	text-transform: uppercase;
-	white-space: normal;
-	font-weight: 700;
-	text-align: center;
-	padding: 17px 48px;
-	color: var(--buttontextcolor);
-	background-color: var(--buttoncolor);
-	height: 48px;
+	letter-spacing: 0.5px;
+	transition: background-color 0.25s ease, color 0.25s ease;
+	border: none;
 }
 
 button:hover {
-	transition: background-color 0.3s ease-out;
-	background-color: var(--buttonhovercolor);
+	background-color: var(--menuhovercolor);
+	color: var(--highlightcolor);
+}
+
+/* ----- LOGIN AREA ----- */
+
+.center {
+	text-align: center;
+	margin: auto;
+}
+
+/* From Uiverse.io by Satwinder04 */
+/* Input container */
+.input-container {
+	position: relative;
+	margin: 20px;
+}
+
+/* Input field */
+.input-field {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-bottom: 2px solid #ccc;
+	outline: none;
+	background-color: transparent;
+}
+
+/* Input label */
+.input-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 16px;
+	color: rgba(204, 204, 204, 0);
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 0;
+	background-color: var(--highlightcolor);
+	transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus+.input-label {
+	top: -16px;
+	font-size: 16px;
+	color: var(--highlightcolor);
+}
+
+.input-field:focus+.input-label+.input-highlight {
+	width: 100%;
+}
+
+.hide {
+	text-transform: "*";
+}
+
+.login {
+	width: 350px;
+	margin: auto;
+	padding: 20px;
+	text-align: center;
+	border-radius: 15px;
+	padding: 30px;
+}
+
+.color-cycle {
+	animation: cycleColors 5s infinite;
+	/* Change duration as needed */
+}
+
+@keyframes cycleColors {
+	0% {
+		background-color: hsl(0, 0%, 100%);
+	}
+
+	50% {
+		background-color: hsl(0, 0%, 93%);
+	}
+
+	100% {
+		background-color: hsl(0, 0%, 100%);
+	}
 }
