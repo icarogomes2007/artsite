@@ -22,7 +22,52 @@
 <body>
 
     <header>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg bg-secondary-subtle">
+            <div class="container-fluid">
+                <!-- ISSO É O ÍCONE E LOGO -->
+                <a class="navbar-brand" href="/index.html">
+                    <img src="img/brush.png" alt="logo" width="32" height="32" class="d-inline-block align-text-top">
+                    Artsite
+                </a>
 
+                <!-- ISSO É O BOTÃO QUE APARECE PRA ABRIR A NAV -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- EU ACHO QUE ISSO É A BARRA -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- BOTÃO HOME -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"><i
+                                    class="bi bi-house-fill"></i> Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="sobre.html"><i
+                                    class="bi bi-patch-question-fill"></i> Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="explorar.html"><i
+                                    class="bi bi-compass-fill"></i> Explorar</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center">
+                        <div class="form-check form-switch me-3">
+                            <input class="form-check-input" type="checkbox" id="themeToggle" role="switch">
+                            <label class="form-check-label" for="themeToggle">
+                                <i class="bi bi-moon-stars"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -183,8 +228,44 @@
 
     </main>
 
-    <footer>
+    <footer class="py-4 mt-auto border-top" data-bs-theme>
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5 class="mb-3 text-body">Contato</h5>
+                    <ul class="list-unstyled text-body-secondary">
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i> contato@artsite.com.br
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-whatsapp me-2"></i> (21) 4002-8922
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt me-2"></i> Rio de Janeiro, Brasil
+                        </li>
+                    </ul>
+                </div>
 
+                <!-- Social Media -->
+                <div class="col-md-6">
+                    <h5 class="mb-3 text-body">Redes Sociais</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="link-body-emphasis fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="link-body-emphasis fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="link-body-emphasis fs-4"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="link-body-emphasis fs-4"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div>
+                <div class="col-12 text-center text-body-tertiary">
+                    <p class="mb-0">© 2025 Artsite. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="js/replace.js"></script>
